@@ -1,0 +1,56 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F6C07951-93F2-4988-85F9-42137A7F28C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtoCommerce.MarketingExperienceApi.Web", "src\VirtoCommerce.MarketingExperienceApi.Web\VirtoCommerce.MarketingExperienceApi.Web.csproj", "{9378E4DE-67BE-4D8D-AE61-E4DBA793BDD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtoCommerce.MarketingExperienceApi.Data", "src\VirtoCommerce.MarketingExperienceApi.Data\VirtoCommerce.MarketingExperienceApi.Data.csproj", "{5BA9352E-8334-4B6F-8F35-673C99A52BE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C036A624-4BCD-491C-941E-AFC6BB8C1C05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtoCommerce.MarketingExperienceApi.Tests", "tests\VirtoCommerce.MarketingExperienceApi.Tests\VirtoCommerce.MarketingExperienceApi.Tests.csproj", "{8BB89753-B0D5-4EC1-97E1-2944DF89E992}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E21C4BCF-C773-48CA-8714-3E46DEA3A56E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		LICENSE = LICENSE
+		module.ignore = module.ignore
+		README.md = README.md
+		VirtoCommerce.MarketingExperienceApi.sln.DotSettings = VirtoCommerce.MarketingExperienceApi.sln.DotSettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9378E4DE-67BE-4D8D-AE61-E4DBA793BDD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9378E4DE-67BE-4D8D-AE61-E4DBA793BDD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9378E4DE-67BE-4D8D-AE61-E4DBA793BDD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9378E4DE-67BE-4D8D-AE61-E4DBA793BDD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA9352E-8334-4B6F-8F35-673C99A52BE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA9352E-8334-4B6F-8F35-673C99A52BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA9352E-8334-4B6F-8F35-673C99A52BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA9352E-8334-4B6F-8F35-673C99A52BE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BB89753-B0D5-4EC1-97E1-2944DF89E992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB89753-B0D5-4EC1-97E1-2944DF89E992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB89753-B0D5-4EC1-97E1-2944DF89E992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB89753-B0D5-4EC1-97E1-2944DF89E992}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9378E4DE-67BE-4D8D-AE61-E4DBA793BDD0} = {F6C07951-93F2-4988-85F9-42137A7F28C1}
+		{5BA9352E-8334-4B6F-8F35-673C99A52BE4} = {F6C07951-93F2-4988-85F9-42137A7F28C1}
+		{8BB89753-B0D5-4EC1-97E1-2944DF89E992} = {C036A624-4BCD-491C-941E-AFC6BB8C1C05}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {387AA682-1C4C-40C5-8AB3-D2A15FA42628}
+	EndGlobalSection
+EndGlobal

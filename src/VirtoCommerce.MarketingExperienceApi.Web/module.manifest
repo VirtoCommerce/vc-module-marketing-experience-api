@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+    <id>VirtoCommerce.MarketingExperienceApi</id>
+    <version>3.200.0</version>
+    <version-tag></version-tag>
+
+    <platformVersion>3.265.0</platformVersion>
+    <dependencies>
+        <dependency id="VirtoCommerce.ExperienceApi" version="3.233.0" />
+    </dependencies>
+
+    <title>VirtoCommerce MarketingExperienceApi module</title>
+    <description>VirtoCommerce MarketingExperienceApi module</description>
+
+    <authors>
+        <author>Evgeny Okhrimenko</author>
+    </authors>
+    <owners>
+        <owner>VirtoCommerce</owner>
+    </owners>
+
+    <projectUrl>https://github.com/VirtoCommerce/vc-module-marketing-experience-api</projectUrl>
+    <iconUrl>Modules/$(VirtoCommerce.MarketingExperienceApi)/Content/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <assemblyFile>VirtoCommerce.MarketingExperienceApi.Web.dll</assemblyFile>
+    <moduleType>VirtoCommerce.MarketingExperienceApi.Web.Module, VirtoCommerce.MarketingExperienceApi.Web</moduleType>
+
+    <releaseNotes>First version.</releaseNotes>
+    <copyright>Copyright © 2023 VirtoCommerce. All rights reserved</copyright>
+    <tags>extension module</tags>
+    <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
+</module>
