@@ -16,9 +16,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="VirtoCommerce.CustomerModule.Core" Version="3.218.0" />
-    <PackageReference Include="VirtoCommerce.ExperienceApiModule.Core" Version="3.248.0" />
+    <PackageReference Include="VirtoCommerce.ExperienceApiModule.Core" Version="3.257.0-alpha.1095-opus-update-contibution" />
     <PackageReference Include="VirtoCommerce.MarketingModule.Core" Version="3.204.0" />
-    <PackageReference Include="VirtoCommerce.Platform.Data" Version="3.265.0" />
+    <PackageReference Include="VirtoCommerce.Platform.Data" Version="3.271.0" />
   </ItemGroup>
 
 </Project>
