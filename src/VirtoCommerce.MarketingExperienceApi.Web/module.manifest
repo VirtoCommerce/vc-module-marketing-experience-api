@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <id>VirtoCommerce.MarketingExperienceApi</id>
   <version>3.202.0</version>
   <version-tag />
-  <platformVersion>3.265.0</platformVersion>
+  <platformVersion>3.271.0</platformVersion>
   <title>VirtoCommerce MarketingExperienceApi module</title>
   <description>VirtoCommerce MarketingExperienceApi module</description>
   <authors>
@@ -22,7 +22,7 @@
   <moduleType>VirtoCommerce.MarketingExperienceApi.Web.Module, VirtoCommerce.MarketingExperienceApi.Web</moduleType>
   <dependencies>
     <dependency id="VirtoCommerce.Customer" version="3.218.0" />
-    <dependency id="VirtoCommerce.ExperienceApi" version="3.248.0" />
+    <dependency id="VirtoCommerce.ExperienceApi" version="3.257.0" />
     <dependency id="VirtoCommerce.Marketing" version="3.204.0" />
   </dependencies>
   <useFullTypeNameInSwagger>false</useFullTypeNameInSwagger>
