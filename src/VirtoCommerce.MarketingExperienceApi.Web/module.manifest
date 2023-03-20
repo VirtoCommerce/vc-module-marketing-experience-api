@@ -4,8 +4,8 @@
   <version>3.202.0</version>
   <version-tag />
   <platformVersion>3.271.0</platformVersion>
-  <title>VirtoCommerce MarketingExperienceApi module</title>
-  <description>VirtoCommerce MarketingExperienceApi module</description>
+  <title>Marketing Experience API</title>
+  <description>Experience Api extension for Marketing</description>
   <authors>
     <author>Evgeny Okhrimenko</author>
   </authors>
