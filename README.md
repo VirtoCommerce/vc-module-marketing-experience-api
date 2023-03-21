@@ -5,11 +5,11 @@
 X-Marketing provides high performance search queries for dynamic content.
 
 ## Key features
-* Allows you to evaluate dynamic content based on dynamic conditions
-* Ready for banners, slideshow, etc
+* Allows you to evaluate dynamic content based on dynamic conditions.
+* Ready for banners, slideshow, popup, etc.
 
 ## Documentation
-* [Rating and Reviews Module Documentation](https://docs.virtocommerce.org/modules/marketing-experience-api/)
+* [Module Documentation](https://docs.virtocommerce.org/modules/marketing-experience-api/)
 * [View on GitHub](docs/index.md)
 
 ## References
