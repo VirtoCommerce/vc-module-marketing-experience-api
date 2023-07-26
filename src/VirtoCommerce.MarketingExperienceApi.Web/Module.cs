@@ -1,4 +1,3 @@
-using AutoMapper;
 using GraphQL.Server;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
