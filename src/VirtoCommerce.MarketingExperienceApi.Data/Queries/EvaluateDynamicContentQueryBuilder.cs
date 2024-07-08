@@ -61,6 +61,7 @@ namespace VirtoCommerce.MarketingExperienceApi.Data.Queries
 
             var organizationId = context.GetCurrentOrganizationId();
             var organization = await GetOrganization(organizationId);
+
             if (organization?.Groups != null)
             {
                 userGroups.AddDistinct(organization.Groups.ToArray());
