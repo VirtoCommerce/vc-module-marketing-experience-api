@@ -1,5 +1,5 @@
 using GraphQL.Types;
-using VirtoCommerce.ExperienceApiModule.Core.Schemas;
+using VirtoCommerce.Xapi.Core.Schemas;
 using VirtoCommerce.MarketingModule.Core.Model.DynamicContent;
 
 namespace VirtoCommerce.MarketingExperienceApi.Data.Schemas

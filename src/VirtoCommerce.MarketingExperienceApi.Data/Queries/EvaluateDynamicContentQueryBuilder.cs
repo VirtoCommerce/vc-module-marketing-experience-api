@@ -9,13 +9,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using VirtoCommerce.CustomerModule.Core.Model;
 using VirtoCommerce.CustomerModule.Core.Services;
-using VirtoCommerce.ExperienceApiModule.Core;
-using VirtoCommerce.ExperienceApiModule.Core.BaseQueries;
-using VirtoCommerce.ExperienceApiModule.Core.Extensions;
 using VirtoCommerce.MarketingExperienceApi.Data.Schemas;
 using VirtoCommerce.MarketingModule.Core.Model.DynamicContent;
 using VirtoCommerce.Platform.Core.Common;
 using VirtoCommerce.Platform.Core.Security;
+using VirtoCommerce.Xapi.Core.BaseQueries;
+using VirtoCommerce.Xapi.Core.Extensions;
+using static VirtoCommerce.Xapi.Core.ModuleConstants;
 
 namespace VirtoCommerce.MarketingExperienceApi.Data.Queries
 {
@@ -59,7 +59,8 @@ namespace VirtoCommerce.MarketingExperienceApi.Data.Queries
 
             var userGroups = contact.Groups.ToList();
 
-            var organization = await GetOrganization(contact.Organizations.FirstOrDefault());
+            var organizationId = context.GetCurrentOrganizationId();
+            var organization = await GetOrganization(organizationId);
             if (organization?.Groups != null)
             {
                 userGroups.AddDistinct(organization.Groups.ToArray());

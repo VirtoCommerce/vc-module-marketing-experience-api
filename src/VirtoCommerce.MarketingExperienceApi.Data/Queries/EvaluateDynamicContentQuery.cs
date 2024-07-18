@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using GraphQL;
 using GraphQL.Types;
-using VirtoCommerce.ExperienceApiModule.Core.BaseQueries;
+using VirtoCommerce.Xapi.Core.BaseQueries;
 using VirtoCommerce.MarketingModule.Core.Model.DynamicContent;
 
 namespace VirtoCommerce.MarketingExperienceApi.Data.Queries

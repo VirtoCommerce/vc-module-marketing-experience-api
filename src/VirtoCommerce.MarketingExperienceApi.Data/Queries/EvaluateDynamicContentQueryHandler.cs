@@ -1,6 +1,6 @@
 using System.Threading;
 using System.Threading.Tasks;
-using VirtoCommerce.ExperienceApiModule.Core.Infrastructure;
+using VirtoCommerce.Xapi.Core.Infrastructure;
 using VirtoCommerce.MarketingModule.Core.Model;
 using VirtoCommerce.MarketingModule.Core.Model.DynamicContent;
 using VirtoCommerce.MarketingModule.Core.Services;
