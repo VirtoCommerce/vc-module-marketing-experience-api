@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 using GraphQL;
 using MediatR;
@@ -72,11 +71,7 @@ namespace VirtoCommerce.MarketingExperienceApi.Data.Queries
         private static string GetUserId(IResolveFieldContext<object> context)
         {
             var user = context.GetCurrentPrincipal();
-
-            return
-                user.FindFirstValue(ClaimTypes.NameIdentifier) ??
-                user.FindFirstValue("name") ??
-                AnonymousUser.UserName;
+            return user.GetUserId() ?? AnonymousUser.UserName;
         }
 
         private async Task<Contact> GetContact(string userId)
