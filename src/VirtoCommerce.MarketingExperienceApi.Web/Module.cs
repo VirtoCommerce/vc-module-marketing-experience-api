@@ -1,12 +1,11 @@
-using GraphQL.Server;
-using MediatR;
+using GraphQL;
+using GraphQL.MicrosoftDI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using VirtoCommerce.Xapi.Core.Extensions;
-using VirtoCommerce.Xapi.Core.Infrastructure;
 using VirtoCommerce.MarketingExperienceApi.Data;
 using VirtoCommerce.Platform.Core.Modularity;
+using VirtoCommerce.Xapi.Core.Extensions;
 
 namespace VirtoCommerce.MarketingExperienceApi.Web;
 
@@ -17,12 +16,10 @@ public class Module : IModule, IHasConfiguration
 
     public void Initialize(IServiceCollection serviceCollection)
     {
-        var assemblyMarker = typeof(AssemblyMarker);
-        var graphQlBuilder = new CustomGraphQLBuilder(serviceCollection);
-        graphQlBuilder.AddGraphTypes(assemblyMarker);
-        serviceCollection.AddMediatR(assemblyMarker);
-        serviceCollection.AddAutoMapper(assemblyMarker);
-        serviceCollection.AddSchemaBuilders(assemblyMarker);
+        _ = new GraphQLBuilder(serviceCollection, builder =>
+        {
+            builder.AddSchema(serviceCollection, typeof(AssemblyMarker));
+        });
     }
 
     public void PostInitialize(IApplicationBuilder appBuilder)

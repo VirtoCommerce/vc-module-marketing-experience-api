@@ -1,9 +1,9 @@
 using GraphQL.Types;
+using VirtoCommerce.MarketingModule.Core.Model;
 using VirtoCommerce.Xapi.Core.Extensions;
 using VirtoCommerce.Xapi.Core.Helpers;
 using VirtoCommerce.Xapi.Core.Schemas;
 using VirtoCommerce.Xapi.Core.Services;
-using VirtoCommerce.MarketingModule.Core.Model;
 
 namespace VirtoCommerce.MarketingExperienceApi.Data.Schemas
 {
@@ -17,11 +17,11 @@ namespace VirtoCommerce.MarketingExperienceApi.Data.Schemas
             Field(x => x.Description);
             Field(x => x.Priority);
 
-            ExtendableField<ListGraphType<DynamicPropertyValueType>>(
+            ExtendableFieldAsync<ListGraphType<DynamicPropertyValueType>>(
             "dynamicProperties",
             "Dynamic content dynamic property values",
                 QueryArgumentPresets.GetArgumentForDynamicProperties(),
-                context => dynamicPropertyResolverService.LoadDynamicPropertyValues(context.Source, context.GetArgumentOrValue<string>("cultureName")));
+                async context => await dynamicPropertyResolverService.LoadDynamicPropertyValues(context.Source, context.GetArgumentOrValue<string>("cultureName")));
         }
     }
 }
