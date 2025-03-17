@@ -11,7 +11,6 @@ The xMarketing module provides high performance search queries for dynamic conte
 ## Documentation
 
 * [xMarketing module documentation](https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/Marketing/overview/)
-* [REST API](https://virtostart-demo-admin.govirto.com/docs/index.html?urls.primaryName=VirtoCommerce.MarketingExperienceApi)
 * [View on GitHub](https://github.com/VirtoCommerce/vc-module-marketing-experience-api/)
 * [Experience API Documentation](https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/)
 * [Getting started](https://docs.virtocommerce.org/platform/developer-guide/GraphQL-Storefront-API-Reference-xAPI/getting-started/)
