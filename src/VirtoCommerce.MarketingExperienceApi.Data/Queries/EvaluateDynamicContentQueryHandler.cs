@@ -32,7 +32,7 @@ namespace VirtoCommerce.MarketingExperienceApi.Data.Queries
 
             var items = await _marketingDynamicContentEvaluator.EvaluateItemsAsync(context);
 
-            var result = new EvaluateDynamicContentResult() { Items = items, TotalCount = items.Length };
+            var result = new EvaluateDynamicContentResult() { Items = items, TotalCount = items.Count };
             return result;
         }
     }
