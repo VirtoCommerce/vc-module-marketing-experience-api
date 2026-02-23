@@ -9,7 +9,7 @@
   <ItemGroup>
     
     <PackageReference Include="VirtoCommerce.CustomerModule.Core" Version="3.1000.0" />
-    <PackageReference Include="VirtoCommerce.MarketingModule.Core" Version="3.1000.0" />
+    <PackageReference Include="VirtoCommerce.MarketingModule.Core" Version="3.1001.0-alpha.913-vcst-4590" />
     <PackageReference Include="VirtoCommerce.Platform.Data" Version="3.1002.0" />
     <PackageReference Include="VirtoCommerce.Xapi.Core" Version="3.1000.0" />
   </ItemGroup>
