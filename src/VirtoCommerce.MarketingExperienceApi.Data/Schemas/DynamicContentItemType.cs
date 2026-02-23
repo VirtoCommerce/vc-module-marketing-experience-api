@@ -1,7 +1,6 @@
 using GraphQL.Types;
 using VirtoCommerce.MarketingModule.Core.Model;
 using VirtoCommerce.Xapi.Core.Extensions;
-using VirtoCommerce.Xapi.Core.Helpers;
 using VirtoCommerce.Xapi.Core.Schemas;
 using VirtoCommerce.Xapi.Core.Services;
 
@@ -20,7 +19,11 @@ namespace VirtoCommerce.MarketingExperienceApi.Data.Schemas
             ExtendableFieldAsync<ListGraphType<DynamicPropertyValueType>>(
             "dynamicProperties",
             "Dynamic content dynamic property values",
-                QueryArgumentPresets.GetArgumentForDynamicProperties(),
+                new QueryArguments(new QueryArgument<StringGraphType>
+                {
+                    Name = "cultureName",
+                    Description = "Filter multilingual dynamic properties to return only values of specified language (\"en-US\")"
+                }),
                 async context => await dynamicPropertyResolverService.LoadDynamicPropertyValues(context.Source, context.GetArgumentOrValue<string>("cultureName")));
         }
     }
