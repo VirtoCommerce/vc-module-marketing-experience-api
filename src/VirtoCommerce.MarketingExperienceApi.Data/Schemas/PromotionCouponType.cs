@@ -24,7 +24,7 @@ public class PromotionCouponType : ExtendableGraphType<Promotion>
             .Description("Localized name of the promotion.");
 
         Field<StringGraphType>("description")
-            .Resolve(context => GetLocalizedValue(context, context.Source.LocalizedDescription))
+            .Resolve(context => GetLocalizedValue(context, context.Source.LocalizedDescription, context.Source.Description))
             .Description("Localized description of the promotion.");
 
         var couponCodeField = new FieldType
@@ -46,7 +46,7 @@ public class PromotionCouponType : ExtendableGraphType<Promotion>
 
                     var result = searchResult.Results
                         .GroupBy(x => x.PromotionId)
-                        .ToDictionary(x => x.Key, x => x.FirstOrDefault().Code);
+                        .ToDictionary(x => x.Key, x => x.FirstOrDefault()?.Code);
 
                     return result;
                 });
