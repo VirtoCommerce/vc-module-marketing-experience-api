@@ -32,7 +32,7 @@ public class PromotionCouponsQueryHandler : IQueryHandler<PromotionCouponsQuery,
         promotionSearchCriteria.Store = request.StoreId;
         promotionSearchCriteria.CouponCount = 1;
         promotionSearchCriteria.Skip = request.Skip;
-        promotionSearchCriteria.Take = request.Take
+        promotionSearchCriteria.Take = request.Take;
 
         return promotionSearchCriteria;
     }
