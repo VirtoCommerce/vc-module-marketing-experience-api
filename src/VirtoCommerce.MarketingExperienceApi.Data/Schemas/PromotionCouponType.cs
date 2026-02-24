@@ -35,14 +35,18 @@ public class PromotionCouponType : ExtendableGraphType<Promotion>
             {
                 var loader = dataLoader.Context.GetOrAddBatchLoader<string, string>("promotion_coupons", async (ids) =>
                 {
+                    var promotionIds = ids.ToArray();
                     var couponCodeSearchCriteria = new CouponSearchCriteria
                     {
-                        PromotionIds = ids.ToArray(),
+                        PromotionIds = promotionIds,
+                        Take = promotionIds.Length,
                     };
 
                     var searchResult = await couponSearchService.SearchNoCloneAsync(couponCodeSearchCriteria);
 
-                    var result = searchResult.Results.ToDictionary(x => x.PromotionId, x => x.Code);
+                    var result = searchResult.Results
+                        .GroupBy(x => x.PromotionId)
+                        .ToDictionary(x => x.Key, x => x.FirstOrDefault().Code);
 
                     return result;
                 });

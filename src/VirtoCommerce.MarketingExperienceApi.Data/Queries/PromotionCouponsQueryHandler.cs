@@ -31,6 +31,8 @@ public class PromotionCouponsQueryHandler : IQueryHandler<PromotionCouponsQuery,
         promotionSearchCriteria.IsPublic = true;
         promotionSearchCriteria.Store = request.StoreId;
         promotionSearchCriteria.CouponCount = 1;
+        promotionSearchCriteria.Skip = request.Skip;
+        promotionSearchCriteria.Take = request.Take
 
         return promotionSearchCriteria;
     }
