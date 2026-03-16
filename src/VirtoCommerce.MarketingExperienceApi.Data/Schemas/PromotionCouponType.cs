@@ -22,6 +22,10 @@ public class PromotionCouponType : ExtendableGraphType<Promotion>
         Field<StringGraphType>("systemName")
             .Resolve(context => context.Source.Name);
 
+        Field<StringGraphType>("label")
+            .Resolve(context => GetLocalizedValue(context, context.Source.LocalizedLabel))
+            .Description("Localized label of the promotion.");
+
         Field<StringGraphType>("name")
             .Resolve(context => GetLocalizedValue(context, context.Source.LocalizedDisplayName, context.Source.Name))
             .Description("Localized name of the promotion.");
