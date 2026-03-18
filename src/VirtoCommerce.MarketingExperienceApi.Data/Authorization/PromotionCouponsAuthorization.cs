@@ -31,7 +31,7 @@ public class PromotionCouponsAuthorizationHandler : AuthorizationHandler<Promoti
             using var userManager = _userManagerFactory();
             var user = await userManager.FindByIdAsync(currentUserId);
 
-            if (user != null)
+            if (user?.StoreId != null)
             {
                 result = user.StoreId.EqualsIgnoreCase(storeId);
             }
