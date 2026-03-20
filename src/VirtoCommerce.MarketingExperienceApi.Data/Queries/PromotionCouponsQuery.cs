@@ -11,7 +11,6 @@ public class PromotionCouponsQuery : SearchQuery<PromotionSearchResult>
 {
     public string StoreId { get; set; }
     public string UserId { get; set; }
-    public string OrganizationId { get; set; }
     public string CurrencyCode { get; set; }
     public string CultureName { get; set; }
 
@@ -36,6 +35,5 @@ public class PromotionCouponsQuery : SearchQuery<PromotionSearchResult>
         UserId = context.GetArgument<string>(nameof(UserId));
         CurrencyCode = context.GetArgument<string>(nameof(CurrencyCode));
         CultureName = context.GetArgument<string>(nameof(CultureName));
-        OrganizationId = context.GetCurrentOrganizationId();
     }
 }
