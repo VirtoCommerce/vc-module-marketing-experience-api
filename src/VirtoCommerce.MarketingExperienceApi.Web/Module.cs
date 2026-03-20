@@ -1,9 +1,11 @@
 using GraphQL;
 using GraphQL.MicrosoftDI;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using VirtoCommerce.MarketingExperienceApi.Data;
+using VirtoCommerce.MarketingExperienceApi.Data.Authorization;
 using VirtoCommerce.Platform.Core.Modularity;
 using VirtoCommerce.Xapi.Core.Extensions;
 
@@ -20,6 +22,8 @@ public class Module : IModule, IHasConfiguration
         {
             builder.AddSchema(serviceCollection, typeof(AssemblyMarker));
         });
+
+        serviceCollection.AddSingleton<IAuthorizationHandler, PromotionCouponsAuthorizationHandler>();
     }
 
     public void PostInitialize(IApplicationBuilder appBuilder)
