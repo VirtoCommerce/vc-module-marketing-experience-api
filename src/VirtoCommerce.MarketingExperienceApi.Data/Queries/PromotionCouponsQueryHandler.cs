@@ -33,6 +33,7 @@ public class PromotionCouponsQueryHandler : IQueryHandler<PromotionCouponsQuery,
         promotionSearchCriteria.CouponCount = 1;
         promotionSearchCriteria.Skip = request.Skip;
         promotionSearchCriteria.Take = request.Take;
+        promotionSearchCriteria.Sort = request.Sort;
 
         return promotionSearchCriteria;
     }
