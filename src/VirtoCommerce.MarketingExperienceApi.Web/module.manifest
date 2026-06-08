@@ -20,7 +20,7 @@
     <owner>VirtoCommerce</owner>
   </owners>
   <projectUrl>https://github.com/VirtoCommerce/vc-module-marketing-experience-api</projectUrl>
-  <iconUrl>Modules/$(VirtoCommerce.MarketingExperienceApi)/Content/logo.png</iconUrl>
+  <iconUrl>Modules/$(VirtoCommerce.MarketingExperienceApi)/Content/logo.svg</iconUrl>
   <requireLicenseAcceptance>false</requireLicenseAcceptance>
   <releaseNotes>First version.</releaseNotes>
   <copyright>Copyright © 2024-2026 Virto Commerce. All rights reserved</copyright>
