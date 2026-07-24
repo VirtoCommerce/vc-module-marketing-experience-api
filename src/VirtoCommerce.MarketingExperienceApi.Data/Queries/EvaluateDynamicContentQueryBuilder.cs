@@ -26,14 +26,23 @@ namespace VirtoCommerce.MarketingExperienceApi.Data.Queries
         private readonly IMemberService _memberService;
 
         public EvaluateDynamicContentQueryBuilder(
+            IAuthorizationService authorizationService,
+            Func<UserManager<ApplicationUser>> userManagerFactory,
+            IMemberService memberService)
+            : base(authorizationService)
+        {
+            _userManagerFactory = userManagerFactory;
+            _memberService = memberService;
+        }
+
+        [Obsolete("Use the constructor without IMediator. The mediator is resolved from context.RequestServices per request.", DiagnosticId = "VC0015", UrlFormat = "https://docs.virtocommerce.org/products/products-virto3-versions")]
+        public EvaluateDynamicContentQueryBuilder(
             IMediator mediator,
             IAuthorizationService authorizationService,
             Func<UserManager<ApplicationUser>> userManagerFactory,
             IMemberService memberService)
-            : base(mediator, authorizationService)
+            : this(authorizationService, userManagerFactory, memberService)
         {
-            _userManagerFactory = userManagerFactory;
-            _memberService = memberService;
         }
 
         protected override async Task BeforeMediatorSend(IResolveFieldContext<object> context,

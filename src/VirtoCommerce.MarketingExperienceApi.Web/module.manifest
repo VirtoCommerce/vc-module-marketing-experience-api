@@ -8,7 +8,7 @@
   <dependencies>
     <dependency id="VirtoCommerce.Customer" version="3.1000.0" />
     <dependency id="VirtoCommerce.Marketing" version="3.1001.0" />
-    <dependency id="VirtoCommerce.Xapi" version="3.1000.0" />
+    <dependency id="VirtoCommerce.Xapi" version="3.1015.0" />
   </dependencies>
 
   <title>Marketing Experience API</title>
